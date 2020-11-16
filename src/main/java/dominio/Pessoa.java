@@ -1,9 +1,17 @@
 package dominio;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.io.Serializable;
 
+@Entity
 public class Pessoa implements Serializable {
     private static final long serialVersionUID = 1;
+
+   @Id
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer Id;
     private String nome;
     private String email;
